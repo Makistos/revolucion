@@ -1,0 +1,2 @@
+/usr/bin/ar qc librev_engine.a  CMakeFiles/rev_engine.dir/gfx/graphics.cpp.o CMakeFiles/rev_engine.dir/gfx/tile.cpp.o CMakeFiles/rev_engine.dir/gfx/texture.cpp.o
+/usr/bin/ranlib librev_engine.a
