@@ -12,6 +12,7 @@ int main( int argc, char* argv[] )
 	(void) argv;
 	bool quit = false;
 	SDL_Event e;
+	std::string tile_file = "ground_tiles.png";
 	int map[25] =  {1, 1, 6, 1, 1,
 			 4, 4, 8, 3, 3,
 			 4, 4, 8, 3, 3,
@@ -26,7 +27,7 @@ int main( int argc, char* argv[] )
 	//gfx->loadMedia("buldogs.png");
 	//gfx->loadMedia("bulldogs.png");
 	//gfx->loadMedia("ground_tiles.png");
-	gfx.loadTileSet("ground_tiles.png", 384, 128, 12, 6, 2);
+	gfx.loadTileSet(tile_file, 384, 128, 12, 6, 2);
 	gfx.setMap(map, 5, 5);
 	while(!quit) {
 		while(SDL_PollEvent(&e) != 0) {

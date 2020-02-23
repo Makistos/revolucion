@@ -8,19 +8,19 @@ Texture::Texture()
 	std::cout << "Texture";
 }
 
-Texture::Texture(SDL_Renderer* renderer, const std::string& filename)
+void Texture::load(SDL_Renderer* renderer, const std::string& filename)
 {
 	SDL_Surface* surface = IMG_Load(filename.c_str());
 	if (surface == NULL) {
 		std::cout << "Failed to load image " << filename << "! Error: " << IMG_GetError();
 		return;
 	}
-	texture = SDL_CreateTextureFromSurface(renderer, surface);
-	//SDL_QueryTexture(texture, NULL, NULL, &width, &height);
-	SDL_FreeSurface(surface);
-	if (texture == nullptr) {
+	texture = std::make_shared<SDL_Texture*>(SDL_CreateTextureFromSurface(renderer, surface));
+	if (*texture == nullptr) {
 		std::cout << "Failed to create texture from surface: " << SDL_GetError() << std::endl;
 	}
+	SDL_QueryTexture(*texture, NULL, NULL, &width, &height);
+	SDL_FreeSurface(surface);
 	//SDL_SetColorKey(surface, SDL_TRUE,
 	//	     SDL_MapRGB(surface->format, 0, 0xFF, 0xFF));
 	//SDL_Texture* newTexture = SDL_CreateTextureFromSurface();

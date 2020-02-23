@@ -88,8 +88,9 @@ bool Graphics::loadMedia(const std::string& file_name)
 	SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 	SDL_RenderClear(renderer);
 	//std::optional<SDL_Texture*> texture = loadTexture(renderer, file_name);
-	Texture tex = Texture{renderer, file_name};
-	textures.push_back(std::make_shared<Texture>(tex));
+	//Texture tex = Texture{renderer, file_name};
+	textures.push_back(std::make_shared<Texture>());
+
 	SDL_RenderPresent(renderer);
 	return success;
 }
@@ -103,6 +104,7 @@ bool Graphics::loadTileSet(const std::string& file_name,
 	//Texture tex{renderer, f};
 	tileset = TileSet{renderer, f, width,
 			     height, count, count_x, count_y};
+
 
 	return true;
 }

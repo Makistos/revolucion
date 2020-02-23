@@ -8,7 +8,7 @@
 void Tile::render(SDL_Rect* camera)
 {
 	int ret;
-	ret = SDL_RenderCopyEx(renderer, texture_.texture,
+	ret = SDL_RenderCopyEx(renderer, *(texture_.texture),
 			camera, &box, 0.0, NULL, SDL_FLIP_NONE);
 	if (ret == -1) {
 		std::cout << SDL_GetError() << std::endl;
@@ -29,9 +29,8 @@ TileSet::TileSet(SDL_Renderer* renderer, const std::string& filename,
 	int xc = 0;
 	tile_width_ = width / count_x;
 	tile_height_ = height / count_y;
-	texture = Texture{renderer, filename};
+	texture.load(renderer, filename);
 
-	std::cout << std::endl;
 	for (unsigned idx = 0; idx < count; idx++) {
 		SDL_Rect box;
 		box.x = xpos;

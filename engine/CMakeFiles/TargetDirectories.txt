@@ -1,3 +1,0 @@
-/home/mep/src/revolucion/engine/CMakeFiles/rebuild_cache.dir
-/home/mep/src/revolucion/engine/CMakeFiles/rev_engine.dir
-/home/mep/src/revolucion/engine/CMakeFiles/edit_cache.dir
