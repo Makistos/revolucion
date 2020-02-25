@@ -112,8 +112,11 @@ bool Graphics::loadTileSet(const std::string& file_name,
 void Graphics::setMap(int map[], int width, int height)
 {
 	map_ = (int*)malloc(sizeof(int) * width * height);
+	std::cout << std::endl;
 	for(unsigned i=0; i < width*height; i++) {
 		map_[i] = map[i];
+		std::cout << map_[i] << " ";
+		if ((i+1)%5 == 0 && i != 0) std::cout << std::endl;
 	}
 	map_width = width;
 	map_height = height;
@@ -140,7 +143,7 @@ void Graphics::update()
 	box.h = tileset.tile_height();
 	for(int y = 0; y < map_height; y++) {
 		for(int x = 0; x < map_width; x++) {
-			tileset.render(map_[y*x+x], box);
+			tileset.render(map_[y*map_width+x], box);
 			box.x = box.x + box.w;
 		}
 		box.y = box.y + box.h;

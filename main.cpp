@@ -13,11 +13,11 @@ int main( int argc, char* argv[] )
 	bool quit = false;
 	SDL_Event e;
 	std::string tile_file = "ground_tiles.png";
-	int map[25] =  {1, 1, 6, 1, 1,
-			 4, 4, 8, 3, 3,
-			 4, 4, 8, 3, 3,
-			 4, 4, 8, 3, 3,
-			 1, 1, 6, 1, 1};
+	int map[25] =  {7, 7, 7, 7, 7,
+			 8, 1, 1, 1, 8,
+			 8, 1, 5, 1, 8,
+			 8, 1, 1, 1, 8,
+			 7, 7, 7, 7, 7};
 
 
 	auto gfx = Graphics(1920, 1080);

@@ -5,11 +5,11 @@
 #include "tile.h"
 #include "texture.h"
 
-void Tile::render(SDL_Rect* camera)
+void Tile::render(const Texture& texture, SDL_Rect* camera)
 {
 	int ret;
-	ret = SDL_RenderCopyEx(renderer, *(texture_.texture),
-			camera, &box, 0.0, NULL, SDL_FLIP_NONE);
+	ret = SDL_RenderCopyEx(renderer, *(texture.texture),
+			&box, camera, 0.0, NULL, SDL_FLIP_NONE);
 	if (ret == -1) {
 		std::cout << SDL_GetError() << std::endl;
 	}
@@ -59,5 +59,5 @@ void TileSet::render(unsigned idx, SDL_Rect& rect)
 		std::cout << "Tile number " << idx << " does not exist!" << std::endl;
 		return;
 	}
-	tiles[idx]->render(&rect);
+	tiles[idx]->render(texture, &rect);
 }
