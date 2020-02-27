@@ -3,7 +3,7 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "engine/gfx/graphics.h"
+#include "graphics.h"
 #include "eventhandler.h"
 
 int main( int argc, char* argv[] )

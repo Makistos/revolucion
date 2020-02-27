@@ -123,86 +123,113 @@ rev_engine/fast:
 	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/build
 .PHONY : rev_engine/fast
 
-gfx/graphics.o: gfx/graphics.cpp.o
+gfx/src/graphics.o: gfx/src/graphics.cpp.o
 
-.PHONY : gfx/graphics.o
-
-# target to build an object file
-gfx/graphics.cpp.o:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/graphics.cpp.o
-.PHONY : gfx/graphics.cpp.o
-
-gfx/graphics.i: gfx/graphics.cpp.i
-
-.PHONY : gfx/graphics.i
-
-# target to preprocess a source file
-gfx/graphics.cpp.i:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/graphics.cpp.i
-.PHONY : gfx/graphics.cpp.i
-
-gfx/graphics.s: gfx/graphics.cpp.s
-
-.PHONY : gfx/graphics.s
-
-# target to generate assembly for a file
-gfx/graphics.cpp.s:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/graphics.cpp.s
-.PHONY : gfx/graphics.cpp.s
-
-gfx/texture.o: gfx/texture.cpp.o
-
-.PHONY : gfx/texture.o
+.PHONY : gfx/src/graphics.o
 
 # target to build an object file
-gfx/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/texture.cpp.o
-.PHONY : gfx/texture.cpp.o
+gfx/src/graphics.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/graphics.cpp.o
+.PHONY : gfx/src/graphics.cpp.o
 
-gfx/texture.i: gfx/texture.cpp.i
+gfx/src/graphics.i: gfx/src/graphics.cpp.i
 
-.PHONY : gfx/texture.i
+.PHONY : gfx/src/graphics.i
 
 # target to preprocess a source file
-gfx/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/texture.cpp.i
-.PHONY : gfx/texture.cpp.i
+gfx/src/graphics.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/graphics.cpp.i
+.PHONY : gfx/src/graphics.cpp.i
 
-gfx/texture.s: gfx/texture.cpp.s
+gfx/src/graphics.s: gfx/src/graphics.cpp.s
 
-.PHONY : gfx/texture.s
+.PHONY : gfx/src/graphics.s
 
 # target to generate assembly for a file
-gfx/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/texture.cpp.s
-.PHONY : gfx/texture.cpp.s
+gfx/src/graphics.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/graphics.cpp.s
+.PHONY : gfx/src/graphics.cpp.s
 
-gfx/tile.o: gfx/tile.cpp.o
+gfx/src/texture.o: gfx/src/texture.cpp.o
 
-.PHONY : gfx/tile.o
+.PHONY : gfx/src/texture.o
 
 # target to build an object file
-gfx/tile.cpp.o:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/tile.cpp.o
-.PHONY : gfx/tile.cpp.o
+gfx/src/texture.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/texture.cpp.o
+.PHONY : gfx/src/texture.cpp.o
 
-gfx/tile.i: gfx/tile.cpp.i
+gfx/src/texture.i: gfx/src/texture.cpp.i
 
-.PHONY : gfx/tile.i
+.PHONY : gfx/src/texture.i
 
 # target to preprocess a source file
-gfx/tile.cpp.i:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/tile.cpp.i
-.PHONY : gfx/tile.cpp.i
+gfx/src/texture.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/texture.cpp.i
+.PHONY : gfx/src/texture.cpp.i
 
-gfx/tile.s: gfx/tile.cpp.s
+gfx/src/texture.s: gfx/src/texture.cpp.s
 
-.PHONY : gfx/tile.s
+.PHONY : gfx/src/texture.s
 
 # target to generate assembly for a file
-gfx/tile.cpp.s:
-	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/tile.cpp.s
-.PHONY : gfx/tile.cpp.s
+gfx/src/texture.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/texture.cpp.s
+.PHONY : gfx/src/texture.cpp.s
+
+gfx/src/tile.o: gfx/src/tile.cpp.o
+
+.PHONY : gfx/src/tile.o
+
+# target to build an object file
+gfx/src/tile.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tile.cpp.o
+.PHONY : gfx/src/tile.cpp.o
+
+gfx/src/tile.i: gfx/src/tile.cpp.i
+
+.PHONY : gfx/src/tile.i
+
+# target to preprocess a source file
+gfx/src/tile.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tile.cpp.i
+.PHONY : gfx/src/tile.cpp.i
+
+gfx/src/tile.s: gfx/src/tile.cpp.s
+
+.PHONY : gfx/src/tile.s
+
+# target to generate assembly for a file
+gfx/src/tile.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tile.cpp.s
+.PHONY : gfx/src/tile.cpp.s
+
+gfx/src/tileset.o: gfx/src/tileset.cpp.o
+
+.PHONY : gfx/src/tileset.o
+
+# target to build an object file
+gfx/src/tileset.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tileset.cpp.o
+.PHONY : gfx/src/tileset.cpp.o
+
+gfx/src/tileset.i: gfx/src/tileset.cpp.i
+
+.PHONY : gfx/src/tileset.i
+
+# target to preprocess a source file
+gfx/src/tileset.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tileset.cpp.i
+.PHONY : gfx/src/tileset.cpp.i
+
+gfx/src/tileset.s: gfx/src/tileset.cpp.s
+
+.PHONY : gfx/src/tileset.s
+
+# target to generate assembly for a file
+gfx/src/tileset.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tileset.cpp.s
+.PHONY : gfx/src/tileset.cpp.s
 
 # Help Target
 help:
@@ -213,15 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rev_engine"
 	@echo "... edit_cache"
-	@echo "... gfx/graphics.o"
-	@echo "... gfx/graphics.i"
-	@echo "... gfx/graphics.s"
-	@echo "... gfx/texture.o"
-	@echo "... gfx/texture.i"
-	@echo "... gfx/texture.s"
-	@echo "... gfx/tile.o"
-	@echo "... gfx/tile.i"
-	@echo "... gfx/tile.s"
+	@echo "... gfx/src/graphics.o"
+	@echo "... gfx/src/graphics.i"
+	@echo "... gfx/src/graphics.s"
+	@echo "... gfx/src/texture.o"
+	@echo "... gfx/src/texture.i"
+	@echo "... gfx/src/texture.s"
+	@echo "... gfx/src/tile.o"
+	@echo "... gfx/src/tile.i"
+	@echo "... gfx/src/tile.s"
+	@echo "... gfx/src/tileset.o"
+	@echo "... gfx/src/tileset.i"
+	@echo "... gfx/src/tileset.s"
 .PHONY : help
 
 

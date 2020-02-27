@@ -112,11 +112,8 @@ bool Graphics::loadTileSet(const std::string& file_name,
 void Graphics::setMap(int map[], int width, int height)
 {
 	map_ = (int*)malloc(sizeof(int) * width * height);
-	std::cout << std::endl;
 	for(unsigned i=0; i < width*height; i++) {
 		map_[i] = map[i];
-		std::cout << map_[i] << " ";
-		if ((i+1)%5 == 0 && i != 0) std::cout << std::endl;
 	}
 	map_width = width;
 	map_height = height;

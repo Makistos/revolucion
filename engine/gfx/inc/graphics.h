@@ -2,7 +2,7 @@
 #include <iostream>
 #include <list>
 #include <optional>
-#include "tile.h"
+#include "tileset.h"
 
 class Graphics {
 public:

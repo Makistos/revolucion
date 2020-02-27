@@ -3,3 +3,4 @@ revolucion
 *.a
 *.so
 **/CMakeFiles/**
+**/CMakeCache.txt
