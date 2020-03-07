@@ -23,6 +23,13 @@ add_library(tileson STATIC IMPORTED)
 set_target_properties(tileson PROPERTIES
     IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/engine/tileson/libtileson.a")
 
-include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_IMAGE_INCLUDE_DIRS} ${CMAKE_CURRENT_SOURCE_DIR}/engine/gfx/inc)
+include_directories(${SDL2_INCLUDE_DIRS}
+                    ${SDL2_IMAGE_INCLUDE_DIRS}
+                    ${CMAKE_CURRENT_SOURCE_DIR}
+                    ${CMAKE_CURRENT_SOURCE_DIR}/engine
+                    ${CMAKE_CURRENT_SOURCE_DIR}/engine/gfx/inc
+                    ${CMAKE_CURRENT_SOURCE_DIR}/engine/tileson/src
+                    ${CMAKE_CURRENT_SOURCE_DIR}/engine/tileson/external_libs
+                    )
 
 target_link_libraries(revolucion ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES} rev_engine tileson)

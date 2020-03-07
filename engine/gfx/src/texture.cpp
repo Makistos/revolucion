@@ -3,9 +3,11 @@
 #include <iostream>
 #include "texture.h"
 
+using namespace engine;
+
 Texture::Texture()
 {
-	std::cout << "Texture";
+	//std::cout << "Texture";
 }
 
 void Texture::load(SDL_Renderer* renderer, const std::string& filename)

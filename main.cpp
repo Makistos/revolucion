@@ -3,8 +3,8 @@
 #include <string>
 #include <iostream>
 #include <memory>
-#include "graphics.h"
 #include "eventhandler.h"
+#include "engine.h"
 
 int main( int argc, char* argv[] )
 {
@@ -12,33 +12,22 @@ int main( int argc, char* argv[] )
 	(void) argv;
 	bool quit = false;
 	SDL_Event e;
-	std::string tile_file = "ground_tiles.png";
-	int map[25] =  {7, 7, 7, 7, 7,
-			 8, 1, 1, 1, 8,
-			 8, 1, 5, 1, 8,
-			 8, 1, 1, 1, 8,
-			 7, 7, 7, 7, 7};
+	std::string map_file = "/home/mep/src/revolucion/assets/desert.json";
 
+	auto engine = engine::Engine();
+	engine.init_graphics(1920, 1080);
+	engine.load_tileset(map_file);
+	auto eh = eventhandler::EventHandler();
 
-	auto gfx = Graphics(1920, 1080);
-	auto eh = std::make_unique<eventhandler::EventHandler>();
-
-	//gfx->loadMedia("frenchie.png");
-	//gfx->loadMedia("buldogs.png");
-	//gfx->loadMedia("bulldogs.png");
-	//gfx->loadMedia("ground_tiles.png");
-	gfx.loadTileSet(tile_file, 384, 128, 12, 6, 2);
-	gfx.setMap(map, 5, 5);
 	while(!quit) {
+		eventhandler::Events_e action;
 		while(SDL_PollEvent(&e) != 0) {
-			eventhandler::Events_e action = eh->handle(e);
+			action = eh.handle(e);
 			if (action == eventhandler::QUIT) {
 				quit = true;
-			//} else {
-			//	gfx->drawPrimitive(int(action));
 			}
 		}
-		gfx.update();
+		engine.render();
 	}
 
 	return 0;

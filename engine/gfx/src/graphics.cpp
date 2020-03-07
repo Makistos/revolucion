@@ -7,11 +7,12 @@
 #include <memory>
 #include <optional>
 #include "graphics.h"
+#include "tiledmap.h"
 
-Graphics::Graphics(int width, int height)
+using namespace engine;
+
+void Graphics::init()
 {
-	SCREEN_WIDTH = width;
-	SCREEN_HEIGHT = height;
 	if( SDL_Init(SDL_INIT_VIDEO ) < 0)
 	{
 		std::cout << "SDL could not initialized! SDL_Error: " << SDL_GetError() << std::endl;
@@ -46,8 +47,10 @@ Graphics::Graphics(int width, int height)
 
 Graphics::~Graphics()
 {
-	SDL_DestroyRenderer(renderer);
-	SDL_DestroyWindow(window);
+	if (renderer != NULL) {
+		SDL_DestroyRenderer(renderer);
+		SDL_DestroyWindow(window);
+	}
 	window = NULL;
 	renderer = NULL;
 	IMG_Quit();
@@ -81,6 +84,7 @@ std::optional<std::shared_ptr<Texture>> Graphics::loadTexture(const std::string&
 }
 #endif
 
+#if 0
 bool Graphics::loadMedia(const std::string& file_name)
 {
 	bool success = true;
@@ -94,7 +98,9 @@ bool Graphics::loadMedia(const std::string& file_name)
 	SDL_RenderPresent(renderer);
 	return success;
 }
+#endif
 
+#if 0
 bool Graphics::loadTileSet(const std::string& file_name,
 			   const int width, const int height,
 			   const int count, const int count_x, const int count_y)
@@ -105,8 +111,13 @@ bool Graphics::loadTileSet(const std::string& file_name,
 	tileset = TileSet{renderer, f, width,
 			     height, count, count_x, count_y};
 
-
 	return true;
+}
+#endif
+
+std::unique_ptr<TiledMap> Graphics::load_tileset(const std::string& filename)
+{
+	return std::make_unique<TiledMap>(TiledMap{renderer, filename});
 }
 
 void Graphics::setMap(int map[], int width, int height)
@@ -135,6 +146,7 @@ void Graphics::update()
 	SDL_Rect box = { 0, 0, 0, 0};
 	SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 	SDL_RenderClear(renderer);
+	#if 0
 	//SDL_RenderCopy(renderer, (*current_texture).texture, NULL, NULL);
 	box.w = tileset.tile_width();
 	box.h = tileset.tile_height();
@@ -146,10 +158,11 @@ void Graphics::update()
 		box.y = box.y + box.h;
 		box.x = 0;
 	}
-	SDL_RenderPresent(renderer);
+	#endif
+	//SDL_RenderPresent(renderer);
 }
 
-
+#if 0
 void Graphics::drawPrimitive(int choice)
 {
 	//SDL_RenderCopy(renderer, texture, NULL, NULL);
@@ -165,3 +178,4 @@ void Graphics::drawPrimitive(int choice)
 	}
 	//SDP_RenderCopy(renderer,
 }
+#endif

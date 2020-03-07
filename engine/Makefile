@@ -123,6 +123,33 @@ rev_engine/fast:
 	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/build
 .PHONY : rev_engine/fast
 
+engine.o: engine.cpp.o
+
+.PHONY : engine.o
+
+# target to build an object file
+engine.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/engine.cpp.o
+.PHONY : engine.cpp.o
+
+engine.i: engine.cpp.i
+
+.PHONY : engine.i
+
+# target to preprocess a source file
+engine.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/engine.cpp.i
+.PHONY : engine.cpp.i
+
+engine.s: engine.cpp.s
+
+.PHONY : engine.s
+
+# target to generate assembly for a file
+engine.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/engine.cpp.s
+.PHONY : engine.cpp.s
+
 gfx/src/graphics.o: gfx/src/graphics.cpp.o
 
 .PHONY : gfx/src/graphics.o
@@ -204,6 +231,33 @@ gfx/src/tile.cpp.s:
 	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tile.cpp.s
 .PHONY : gfx/src/tile.cpp.s
 
+gfx/src/tiledmap.o: gfx/src/tiledmap.cpp.o
+
+.PHONY : gfx/src/tiledmap.o
+
+# target to build an object file
+gfx/src/tiledmap.cpp.o:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tiledmap.cpp.o
+.PHONY : gfx/src/tiledmap.cpp.o
+
+gfx/src/tiledmap.i: gfx/src/tiledmap.cpp.i
+
+.PHONY : gfx/src/tiledmap.i
+
+# target to preprocess a source file
+gfx/src/tiledmap.cpp.i:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tiledmap.cpp.i
+.PHONY : gfx/src/tiledmap.cpp.i
+
+gfx/src/tiledmap.s: gfx/src/tiledmap.cpp.s
+
+.PHONY : gfx/src/tiledmap.s
+
+# target to generate assembly for a file
+gfx/src/tiledmap.cpp.s:
+	$(MAKE) -f CMakeFiles/rev_engine.dir/build.make CMakeFiles/rev_engine.dir/gfx/src/tiledmap.cpp.s
+.PHONY : gfx/src/tiledmap.cpp.s
+
 gfx/src/tileset.o: gfx/src/tileset.cpp.o
 
 .PHONY : gfx/src/tileset.o
@@ -240,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... rev_engine"
 	@echo "... edit_cache"
+	@echo "... engine.o"
+	@echo "... engine.i"
+	@echo "... engine.s"
 	@echo "... gfx/src/graphics.o"
 	@echo "... gfx/src/graphics.i"
 	@echo "... gfx/src/graphics.s"
@@ -249,6 +306,9 @@ help:
 	@echo "... gfx/src/tile.o"
 	@echo "... gfx/src/tile.i"
 	@echo "... gfx/src/tile.s"
+	@echo "... gfx/src/tiledmap.o"
+	@echo "... gfx/src/tiledmap.i"
+	@echo "... gfx/src/tiledmap.s"
 	@echo "... gfx/src/tileset.o"
 	@echo "... gfx/src/tileset.i"
 	@echo "... gfx/src/tileset.s"

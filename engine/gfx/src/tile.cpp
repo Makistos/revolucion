@@ -4,7 +4,8 @@
 #include <fstream>
 #include "tile.h"
 #include "texture.h"
-#include "Tileson.h"
+
+using namespace engine;
 
 void Tile::render(const Texture& texture, SDL_Rect* camera)
 {

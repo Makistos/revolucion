@@ -3,6 +3,8 @@
 #include "tileset.h"
 #include "tile.h"
 
+using namespace engine;
+
 TileSet::TileSet(SDL_Renderer* renderer, const std::string& filename,
 		 int width, int height,
 		 int count, int count_x, int count_y)
@@ -12,7 +14,7 @@ TileSet::TileSet(SDL_Renderer* renderer, const std::string& filename,
 	int xc = 0;
 	tile_width_ = width / count_x;
 	tile_height_ = height / count_y;
-	texture.load(renderer, filename);
+	//texture.load(renderer, filename);
 
 	for (unsigned idx = 0; idx < count; idx++) {
 		SDL_Rect box;
